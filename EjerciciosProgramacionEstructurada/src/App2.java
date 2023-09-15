@@ -24,11 +24,11 @@ public class App2{
           horaExtra=sueldo.nextByte();
         }while(horaExtra<=0 || horaExtra>40);
 
-        salarioInicial = salario * horaT;
-        pagoExtra = salario * 2;
-        salarioPostInss = salarioInicial + pagoExtra;
-        inss = salarioPostInss * 0.07;
-        salarioBruto = salarioPostInss - inss;
+        salarioInicial= salario * horaT;
+        pagoExtra= salario * 2;
+        salarioPostInss= salarioInicial + pagoExtra;
+        inss= salarioPostInss * 0.07;
+        salarioBruto= salarioPostInss - inss;
 
         System.out.println("Su salario semanal es  " +salarioInicial);
         System.out.println("Su salario mas las horas extra es " +salarioPostInss);

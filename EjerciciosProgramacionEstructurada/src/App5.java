@@ -3,7 +3,7 @@ public class App5 {
 
         System.out.print("En este programa se medira el tiempo la rapidz real con la que opera la computadora");
         
-        long tiempoInicial = System.currentTimeMillis();
+        long tiempoInicial= System.currentTimeMillis();
         
         int cuenta = 1;
         while (cuenta <= 300000000) {
