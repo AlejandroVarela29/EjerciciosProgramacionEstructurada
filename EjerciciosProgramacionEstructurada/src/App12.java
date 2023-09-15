@@ -1,32 +1,43 @@
 import java.util.Scanner;
-public class App12 {
+public class App6 {
     public static void main(String[] args) {
 
-        int numCajas,numContenedores, numRosquillas, numCajasSobrantes, numContenedores;
-        Scanner rosquillas = new Scanner(System.in);
+          int numeroCuenta, numeroCanalesPremium, numeroConexiones = 0;
+          double importeFactura= 0;
+          char codigoCliente;
+
+          Scanner cajero= new Scanner(System.in);
         
-        System.out.println("Introduzca el número total de rosquillas:");
-        numRosquillas = rosquillas.nextInt();
-     
-        numCajas = numRosquillas / 24;
-        numContenedores = numCajas / 75;
-    
-        int numRosquillasSobrantes = numRosquillas % 24;
-        if (numRosquillasSobrantes > 0) {
-            numCajas--;
+          System.out.println("Ingrese el número de cuenta del cliente:");
+          numeroCuenta= cajero.nextInt();
+        
+          System.out.println("Ingrese el código de cliente (R/N):");
+          codigoCliente= cajero.next().charAt(0);
+        
+          System.out.println("Ingrese el número de canales Premium:");
+          numeroCanalesPremium= cajero.nextInt();
+        
+          
+        if(codigoCliente=='N' || codigoCliente=='n') {
+            System.out.println("Ingrese el número de conexiones de servicio básico:");
+            numeroConexiones= cajero.nextInt();
         }
         
-        numCajasSobrantes = numCajas % 75;
-        if (numCajasSobrantes > 0) {
-            numContenedores--;
+        if (codigoCliente=='R' || codigoCliente=='r') {
+            
+            importeFactura = 4.50 + 20.50 + 7.50 * numeroCanalesPremium;
+        } else if (codigoCliente=='N' || codigoCliente=='n') {
+        
+            if (numeroConexiones <= 10) {
+                importeFactura= 15.00 + 75.00 + 50.00 * numeroCanalesPremium;
+            } else {
+                importeFactura= 15.00 + 75.00 + 5.00 * (numeroConexiones - 10) + 50.00 * numeroCanalesPremium;
+            }
         }
         
-        System.out.println("Número de cajas necesarias: " + numCajas);
-        System.out.println("Número de contenedores necesarios: " + numContenedores);
+          System.out.println("Número de cuenta: " + numeroCuenta);
+          System.out.println("Importe de facturación: " + importeFactura);
 
-        System.out.println("Número de rosquillas sobrantes: " + numRosquillasSobrantes);
-        System.out.println("Número de cajas sobrantes: " + numCajasSobrantes);
-
-        rosquillas.close();
+        cajero.close();
     }
 }

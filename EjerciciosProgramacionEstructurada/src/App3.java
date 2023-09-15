@@ -1,31 +1,32 @@
 import java.util.Scanner;
-public class App3 {
+public class App12 {
+    public static void main(String[] args) {
 
-    public static void main(String args[]){
-        int litros =0,kilometros=0;
-        double total;
-
-        Scanner viaje = new Scanner(System.in);
-
-        System.out.println("En  este programa se realizaran los calculos para ver los");
-        System.out.println("Kilometros obtenidos por litros");
-         
-        do{
-        System.out.println("Cuantos litros de combustible uso?");
-        litros=viaje.nextInt();
-        }while(litros <=0 || litros>100);
-
-        do{
-            System.out.println("Cuantos kilometros recorrio");
-            kilometros=viaje.nextInt();
-        }while(kilometros<=0 || kilometros>500);
-
-        total = litros / kilometros * 100;
-
-        System.out.println("Los kilometros por litro son " +total);
-
-
-        viaje.close();
-    }
+        int numCajas,numContenedores, numRosquillas, numCajasSobrantes, numContenedores;
+        Scanner rosquillas = new Scanner(System.in);
+        
+        System.out.println("Introduzca el número total de rosquillas:");
+        numRosquillas = rosquillas.nextInt();
+     
+        numCajas = numRosquillas / 24;
+        numContenedores = numCajas / 75;
     
+        int numRosquillasSobrantes = numRosquillas % 24;
+        if (numRosquillasSobrantes > 0) {
+            numCajas--;
+        }
+        
+        numCajasSobrantes = numCajas % 75;
+        if (numCajasSobrantes > 0) {
+            numContenedores--;
+        }
+        
+        System.out.println("Número de cajas necesarias: " + numCajas);
+        System.out.println("Número de contenedores necesarios: " + numContenedores);
+
+        System.out.println("Número de rosquillas sobrantes: " + numRosquillasSobrantes);
+        System.out.println("Número de cajas sobrantes: " + numCajasSobrantes);
+
+        rosquillas.close();
+    }
 }
