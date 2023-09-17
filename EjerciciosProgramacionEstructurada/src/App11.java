@@ -1,13 +1,12 @@
 import java.util.Scanner;
 
-public class App4 {
+public class App11 {
     public static void main(String[] args) {
 
       double montoPrestamo,tasaInteresAnual,tasaInteresMensual, pagoCapital, pagoMensual;
       int meses = 0;
         Scanner prestamo = new Scanner(System.in);
 
-        
           System.out.print("Monto del préstamo (en C$): ");
           montoPrestamo= prestamo.nextDouble();
 
@@ -17,7 +16,6 @@ public class App4 {
           System.out.print("Pago mensual (en C$): ");
           pagoMensual= prestamo.nextDouble();
 
-      
           tasaInteresMensual = (tasaInteresAnual / 12) / 100;
                 
         while (montoPrestamo > 0) {

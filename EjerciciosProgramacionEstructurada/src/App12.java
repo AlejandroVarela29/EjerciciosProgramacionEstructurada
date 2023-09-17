@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class App6 {
+public class App12 {
     public static void main(String[] args) {
 
           int numeroCuenta, numeroCanalesPremium, numeroConexiones = 0;
@@ -17,7 +17,6 @@ public class App6 {
           System.out.println("Ingrese el número de canales Premium:");
           numeroCanalesPremium= cajero.nextInt();
         
-          
         if(codigoCliente=='N' || codigoCliente=='n') {
             System.out.println("Ingrese el número de conexiones de servicio básico:");
             numeroConexiones= cajero.nextInt();

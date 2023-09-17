@@ -1,12 +1,15 @@
 import java.util.Scanner;
-public class App10 {
+public class App1 {
     public static void main(String[] args) {
+
 
         int edad;
         char género, armas;
 
-
         Scanner disco = new Scanner(System.in);
+        
+        System.out.println("Se realizara un programa para ver si cump[le los requisitos para ");
+        System.out.println("Entrar a la discoteca y poder disfrutar de la misma ");
         
         System.out.println("¿Cuál es tu edad?");
         edad= disco.nextInt();

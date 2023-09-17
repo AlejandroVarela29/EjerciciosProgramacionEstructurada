@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class App {
+public class App10 {
     public static void main(String[] args) throws Exception {
       char sexo;
       double a1,a2,a3,a4,a5,b,pesoCorporalkg,pesoCorporalLb, mMuneca = 0, mCintura,mCadera,mAntebrazo,gCorporalkg=0,pGrasaCorporalkg=0, pGrasaCorporalLb=0,gCorporalLB=0;

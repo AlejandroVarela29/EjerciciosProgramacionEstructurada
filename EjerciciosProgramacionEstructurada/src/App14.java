@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class App3 {
+public class App14 {
 
     public static void main(String args[]){
         int litros =0,kilometros=0;

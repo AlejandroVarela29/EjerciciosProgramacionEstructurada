@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class App2{
+public class App15{
 
     public static void main(String args[]){
         byte horaT,horaExtra;

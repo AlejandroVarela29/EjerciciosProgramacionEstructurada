@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class App9 {
+public class App16 {
     public static void main(String[] args) {
 
           int numeroDeCuenta, balanceInicial, cargoTotal, creditoTotal,limiteCredito,nuevoBalace;
