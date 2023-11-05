@@ -21,10 +21,10 @@ public class App2 {
     
             if (lado1 == lado2 && lado2 == lado3) {
                 System.out.println("El triángulo es equilátero");
-            } else if (lado1 == lado2 || lado2 == lado3 || lado1 == lado3) {
-                System.out.println("El triángulo es isósceles");
+            } else if (lado1 == lado2 && lado2 == lado3 && lado1 == lado3) {
+                System.out.println("El triagulo es isósceles");
             } else {
-                System.out.println("El triángulo es escaleno");
+                System.out.println("El triangulo es escaleno");
             }
         } else {
             

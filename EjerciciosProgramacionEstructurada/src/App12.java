@@ -8,17 +8,17 @@ public class App12 {
 
           Scanner cajero= new Scanner(System.in);
         
-          System.out.println("Ingrese el número de cuenta del cliente:");
+          System.out.println("Ingrese el numero de cuenta del cliente:");
           numeroCuenta= cajero.nextInt();
         
-          System.out.println("Ingrese el código de cliente (R/N):");
+          System.out.println("Ingrese el codigo de cliente (R/N):");
           codigoCliente= cajero.next().charAt(0);
         
-          System.out.println("Ingrese el número de canales Premium:");
+          System.out.println("Ingrese el numero de canales Premium:");
           numeroCanalesPremium= cajero.nextInt();
         
         if(codigoCliente=='N' || codigoCliente=='n') {
-            System.out.println("Ingrese el número de conexiones de servicio básico:");
+            System.out.println("Ingrese el numero de conexiones de servicio basico:");
             numeroConexiones= cajero.nextInt();
         }
         

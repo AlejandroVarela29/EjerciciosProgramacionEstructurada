@@ -25,11 +25,11 @@ public class App3 {
             numContenedores--;
         }
         
-        System.out.println("Número de cajas necesarias: " + numCajas);
-        System.out.println("Número de contenedores necesarios: " + numContenedores);
+        System.out.println("Numero de cajas necesarias: " + numCajas);
+        System.out.println("Numero de contenedores necesarios: " + numContenedores);
 
-        System.out.println("Número de rosquillas sobrantes: " + numRosquillasSobrantes);
-        System.out.println("Número de cajas sobrantes: " + numCajasSobrantes);
+        System.out.println("Numero de rosquillas sobrantes: " + numRosquillasSobrantes);
+        System.out.println("Numero de cajas sobrantes: " + numCajasSobrantes);
 
         rosquillas.close();
     }

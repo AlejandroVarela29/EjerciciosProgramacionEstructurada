@@ -1,61 +1,63 @@
 import java.util.Scanner;
-
 public class App7 {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
 
-        // Solicitar información al usuario
-        System.out.print("Ingrese el número de cuenta: ");
-        int numeroCuenta = scanner.nextInt();
+          int numeroCuenta, minutos;
+          char codigoServicio;
+          double costoTotal = 0.0;
 
-        System.out.print("Ingrese el código de servicio (R para Regular, P para Premium): ");
-        char codigoServicio = scanner.next().charAt(0);
+          Scanner factura = new Scanner(System.in);
 
-        System.out.print("Ingrese la cantidad de minutos utilizados: ");
-        int minutos = scanner.nextInt();
+          System.out.print("Cual es el numero de cuenta  ");
+          numeroCuenta = factura.nextInt();
 
-        double costoTotal = 0.0;
+          System.out.print("Ingrese el código de servicio (R para Regular, P para Premium): ");
+          codigoServicio = factura.next().charAt(0);
 
-        // Calcular el costo según el tipo de servicio
+          System.out.print("Ingrese la cantidad de minutos utilizados: ");
+          minutos = factura.nextInt();
+
+        
         if (codigoServicio == 'R' || codigoServicio == 'r') {
-            // Servicio regular
+        
             if (minutos <= 50) {
-                costoTotal = 10.0; // Tarifa fija de $10
+
+                costoTotal = 10.0; 
             } else {
                 costoTotal = 10.0 + (minutos - 50) * 0.20;
             }
         } else if (codigoServicio == 'P' || codigoServicio == 'p') {
-            // Servicio Premium
-            System.out.print("Ingrese la cantidad de minutos durante el día: ");
-            int minutosDia = scanner.nextInt();
 
-            System.out.print("Ingrese la cantidad de minutos durante la noche: ");
-            int minutosNoche = scanner.nextInt();
+            System.out.print("cual es la cantidad de minutos durante el día: ");
+            int minutosDia = factura.nextInt();
+
+            System.out.print("cual es la cantidad de minutos durante la noche: ");
+            int minutosNoche = factura.nextInt();
 
             if (minutosDia <= 75) {
-                costoTotal += minutosDia * 0; // Los primeros 75 minutos son gratis durante el día
+                costoTotal += minutosDia * 0;
             } else {
                 costoTotal += (minutosDia - 75) * 0.10;
             }
 
             if (minutosNoche <= 100) {
-                costoTotal += minutosNoche * 0; // Los primeros 100 minutos son gratis durante la noche
+                costoTotal += minutosNoche * 0; 
             } else {
                 costoTotal += (minutosNoche - 100) * 0.05;
             }
 
-            costoTotal += 25.0; // Tarifa fija de $25 para el servicio Premium
+            costoTotal += 25.0; 
         } else {
             System.out.println("Código de servicio no válido.");
             return;
         }
 
-        // Mostrar la factura
+        
         System.out.println("\nNúmero de cuenta: " + numeroCuenta);
         System.out.println("Tipo de servicio: " + (codigoServicio == 'R' || codigoServicio == 'r' ? "Regular" : "Premium"));
         System.out.println("Minutos utilizados: " + minutos);
         System.out.println("Cantidad a pagar: $" + costoTotal);
 
-        scanner.close();
+        factura.close();
     }
 }
